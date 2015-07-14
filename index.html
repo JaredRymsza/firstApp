@@ -6,11 +6,11 @@
 </head>
 <body>
     <script>
-        for(var i = 0; i < ; i++) {
-        jQuery.get("http://pde.bixaldigitalmedia.com/sites/default/files/mobile_app/index.html", function (data) {
-                alert(data.nodes[i]);
+        jQuery.get("pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function (data) {
+                for(var i = 0; i < ; i++) {
+                    alert(data.nodes[i]);
+                }
             });
-        }
     </script>
 </body>
 </html>
