@@ -5,12 +5,13 @@
     <title></title>
 </head>
 <body>
-    <script>
-        jQuery.get("pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function (data) {
-                for(var i = 0; i < ; i++) {
-                    alert(data.nodes[i]);
-                }
-            });
+    <script type='text/javascript'>
+        jQuery.get("http://pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function(data){
+            for(var i=0; data.nodes[0].node.nid; i++){
+                document.write(data.nodes[i].node.nid+" "+data.nodes[i].node.title+" "+data.nodes[i].node.Body);
+                document.write("<br>");
+            }
+        });
     </script>
 </body>
 </html>
