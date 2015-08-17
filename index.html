@@ -8,6 +8,7 @@
     <script src='jQuery.js'></script>
     <script type='text/javascript'>
         jQuery.get("http://pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function(data){
+            console.log(data);
             for(var i=0; data.nodes[0].node.nid; i++){
                 document.write(data.nodes[i].node.nid+" "+data.nodes[i].node.title+" "+data.nodes[i].node.Body);
                 document.write("<br>");
