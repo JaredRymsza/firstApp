@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="themes/BixalMobile.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -10,16 +11,16 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <script src='jQuery.js'></script>
-    <script type='text/javascript'>
-        console.log(test);
-        jQuery.get("http://pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function(data){
-            console.log(data);
-            for(var i=0; data.nodes[0].node.nid; i++){
-                document.write(data.nodes[i].node.nid+" "+data.nodes[i].node.title+" "+data.nodes[i].node.Body);
-                document.write("<br>");
-            }
-        });
-    </script>
+    <div id="punto"></div>
+    <!--script src='jQuery.js'></script-->
 </body>
 </html>
+<script type='text/javascript'>
+    jQuery.get("http://pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function(data){
+        console.log(data);
+        var nodes = data.nodes;
+        for(var i=1; i <= nodes.length; i++){
+            jQuery('#punto').append("New Entry " + i + "<br />" + nodes[i].node.title + " " + nodes[i].node.Body + "<br /><br />");
+        }
+    });
+</script>
