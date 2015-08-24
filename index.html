@@ -12,6 +12,7 @@
 <body>
     <script src='jQuery.js'></script>
     <script type='text/javascript'>
+        console.log(test);
         jQuery.get("http://pde.bixaldigitalmedia.com/drupalgap/views_datasource/drupalgap_content", function(data){
             console.log(data);
             for(var i=0; data.nodes[0].node.nid; i++){
